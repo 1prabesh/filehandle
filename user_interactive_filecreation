@@ -1,0 +1,25 @@
+import os
+import shutil       
+def file():
+    path='C:\\Users\\Dell\\Desktop\\applications\\newfile.txt'
+    if os.path.exists(path):
+        print('File already exist')
+    elif os.path.exists(path) is False:
+        print('File does not exist')
+        ans=input('want to create there?').lower()
+        if ans=='yes':
+            with open(path,'w') as file:
+                file.write('Hello file has been modified')
+                print('File has been created please check the respective path')
+        elif ans=='no':
+            print('Terminated')
+    else:
+        print('System closed ')
+
+user=input('Do you want to create file Yes or No\t').lower()
+if user=='yes':
+    file()
+elif user=='no':
+    print('Aborted')
+else:
+    print('Something went wrong')
