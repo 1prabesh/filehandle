@@ -1,0 +1,18 @@
+reversed_string=""
+user=input('Enter string to check:  ').lower()
+count=len(user)
+if type(user) is str:
+     for i in range(count,0,-1):
+        # print(user[i-1],end="")
+        reversed_string += user[i-1]
+else:
+    print('Not supported format')
+
+if  user==reversed_string:
+    print()
+    print('Entered string is palindromic')
+    print()
+    print(f'Your entered string: {user}')
+    print(f'Reveresed string :   {reversed_string}')
+else:
+    print('Enter characters is not palindromic')
